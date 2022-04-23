@@ -1,15 +1,18 @@
 [tool.poetry]
-name = "backend"
+name = "api"
 version = "0.1.0"
-description = "PurpleTube FastAPI backend"
-authors = ["rodriguesms <miguelrodrigues@eng.ci.ufpb.br>"]
+description = ""
+authors = ["Yvson Nunes <yvsonnunes7@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-fastapi = "^0.75.2"
+python = "^3.9"
 uvicorn = "^0.17.6"
+fastapi = "^0.75.2"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+start = "api.main:start"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
