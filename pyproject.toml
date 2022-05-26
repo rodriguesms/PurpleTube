@@ -8,6 +8,8 @@ authors = ["Joelder Aguiar <joelderaguiar@eng.ci.ufpb.br>"]
 python = "^3.8"
 fastapi = "^0.75.2"
 uvicorn = "^0.17.6"
+SQLAlchemy = "^1.4.36"
+psycopg2-binary = "^2.9.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
