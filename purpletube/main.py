@@ -2,12 +2,14 @@ import uvicorn
 from fastapi import FastAPI
 from .routes import movie
 from .routes import user
+from .routes import comment
 
 app = FastAPI(title="PupleTube Api")
 
 #Routes
 app.include_router(movie.router)
 app.include_router(user.router)
+app.include_router(comment.router)
 
 # @app.get("/")
 # async def root():
