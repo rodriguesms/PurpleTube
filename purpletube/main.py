@@ -1,13 +1,17 @@
 import uvicorn
 from fastapi import FastAPI
-from .routers import movie
+from .routes import movie
+from .routes import user
 
-app = FastAPI()
+app = FastAPI(title="PupleTube Api")
+
+#Routes
 app.include_router(movie.router)
+app.include_router(user.router)
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+# @app.get("/")
+# async def root():
+#     return {"message": "Hello World"}
 # fun
 def start():
     """Launched with `poetry run start` at root level"""
