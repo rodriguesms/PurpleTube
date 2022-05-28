@@ -3,8 +3,8 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.expression import insert
 
-from ..models import DbUser
-from ...routes.schemas import User
+from ..models.user import DbUser
+from ...schemas.user import User
 
 def insert(db: Session, request: User):
     new_user = DbUser(

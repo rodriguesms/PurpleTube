@@ -4,7 +4,7 @@ from sqlalchemy.orm.session import Session
 
 from ..db.database import get_db
 from ..db.queries import db_movie
-from .schemas import Filme, FilmeDisplay
+from ..schemas.movie import Filme, FilmeDisplay
 
 router = APIRouter(
     prefix="/movies",

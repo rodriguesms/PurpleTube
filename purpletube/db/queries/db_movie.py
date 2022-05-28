@@ -3,8 +3,8 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.expression import insert
 
-from ..models import DbFilme
-from ...routes.schemas import Filme
+from ..models.movie import DbFilme
+from ...schemas.movie import Filme
 
 def insert(db: Session, request: Filme):
     new_movie = DbFilme(

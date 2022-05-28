@@ -3,8 +3,8 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.expression import insert
 
-from ..models import DbComment
-from ...routes.schemas import Comentario
+from ..models.comment import DbComment
+from ...schemas.comment import Comentario
 
 def insert(db: Session, request: Comentario):
     new_comment = DbComment(

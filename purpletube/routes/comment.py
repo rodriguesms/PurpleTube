@@ -1,10 +1,10 @@
 from fastapi import APIRouter,Depends
-from fastapi.exceptions import HTTPException
+#from fastapi.exceptions import HTTPException
 from sqlalchemy.orm.session import Session
 
 from ..db.database import get_db
 from ..db.queries import db_comment
-from .schemas import Comentario, ComentarioDisplay
+from ..schemas.comment import Comentario, ComentarioDisplay
 
 router = APIRouter(
     prefix="/comments",
