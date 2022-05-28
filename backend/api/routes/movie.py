@@ -14,3 +14,7 @@ router = APIRouter(
 @router.post("",response_model=FilmeDisplay)
 def insert_movie(request: Filme, db:Session = Depends(get_db)):
     return db_movie.insert(db,request)
+
+@router.get("/all",response_model=List[FilmeDisplay])
+def movies(db:Session=Depends(get_db)):
+    return db_movie.get_all(db)

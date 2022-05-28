@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date
 from pydantic import BaseModel
 
 class Ator(BaseModel):
@@ -6,7 +6,7 @@ class Ator(BaseModel):
     nacionalidade: str
     imagem_ator: str
     biografia: str
-    nascimento: datetime
+    nascimento: date
     
 
 class AtorDisplay(BaseModel):
@@ -15,6 +15,6 @@ class AtorDisplay(BaseModel):
     nacionalidade: str
     imagem_ator: str
     biografia: str
-    nascimento: datetime
+    nascimento: date
     class Config():
         orm_mode = True
