@@ -3,7 +3,6 @@ from sqlalchemy.orm import relationship
 
 from ..database import Base
 
-
 class DbComment(Base):
     __tablename__ = "comentario"
     codigo_comentario = Column(Integer, primary_key=True, index=True, autoincrement=True)
