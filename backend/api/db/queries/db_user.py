@@ -19,3 +19,6 @@ def insert(db: Session, request: User):
     db.refresh(new_user)
    
     return new_user
+
+def get_all(db:Session):
+    return db.query(DbUser).all()

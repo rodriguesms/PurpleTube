@@ -18,3 +18,6 @@ def insert(db: Session, request: Comentario):
     db.refresh(new_comment)
     
     return new_comment
+
+def get_all(db:Session):
+    return db.query(DbComment).all()

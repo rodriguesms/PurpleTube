@@ -20,3 +20,6 @@ def insert(db: Session, request: Ator):
     db.refresh(new_actor)
     
     return new_actor
+
+def get_all(db:Session):
+    return db.query(DbActor).all()

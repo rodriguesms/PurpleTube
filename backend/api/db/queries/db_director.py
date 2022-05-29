@@ -16,3 +16,6 @@ def insert(db: Session, request: Diretor):
     db.refresh(new_diretor)
     
     return new_diretor
+
+def get_all(db:Session):
+    return db.query(DbDiretor).all()
