@@ -6,6 +6,9 @@ from .routes import user
 from .routes import comment
 from .routes import director
 from .routes import actor
+from .routes import category
+from .routes import avaliation
+from .routes import like
 
 app = FastAPI(title="PupleTube Api")
 
@@ -15,6 +18,9 @@ app.include_router(user.router)
 app.include_router(comment.router)
 app.include_router(director.router)
 app.include_router(actor.router)
+app.include_router(category.router)
+app.include_router(avaliation.router)
+app.include_router(like.router)
 
 @app.get("/")
 async def root():

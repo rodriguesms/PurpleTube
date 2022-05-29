@@ -13,9 +13,9 @@ router = APIRouter(
 )
 
 @router.post("",response_model=ComentarioDisplay)
-async def insert_movie(request: Comentario, db:Session = Depends(get_db)):
+async def insert_comment(request: Comentario, db:Session = Depends(get_db)):
     return db_comment.insert(db,request)
 
 @router.get("/all", response_model=List[ComentarioDisplay])
-def get_users(db:Session=Depends(get_db)):
+def get_comments(db:Session=Depends(get_db)):
     return db_comment.get_all(db)

@@ -13,7 +13,7 @@ router = APIRouter(
 )
 
 @router.post("",response_model=DiretorDisplay)
-async def insert_movie(request: Diretor, db:Session = Depends(get_db)):
+async def insert_director(request: Diretor, db:Session = Depends(get_db)):
     return db_director.insert(db,request)
 
 @router.get("/all", response_model= List[DiretorDisplay])

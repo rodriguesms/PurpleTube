@@ -11,3 +11,5 @@ class DbActor(Base):
     imagem_ator = Column(String)
     biografia = Column(String)
     nascimento = Column(DateTime)
+
+    filmes = relationship("DbFilme", secondary="papel", back_populates="atores")

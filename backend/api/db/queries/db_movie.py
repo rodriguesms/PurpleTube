@@ -24,3 +24,4 @@ def insert(db: Session, request: Filme):
 
 def get_all(db:Session):
     return db.query(DbFilme).all()
+

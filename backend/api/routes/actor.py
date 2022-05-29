@@ -14,9 +14,9 @@ router = APIRouter(
 )
 
 @router.post("", response_model=AtorDisplay)
-async def insert_movie(request: Ator, db:Session = Depends(get_db)):
+async def insert_actor(request: Ator, db:Session = Depends(get_db)):
     return db_actor.insert(db,request)
 
 @router.get("/all", response_model=List[AtorDisplay])
-async def get_movies(db:Session=Depends(get_db)):
+async def get_actors(db:Session=Depends(get_db)):
     return db_actor.get_all(db)

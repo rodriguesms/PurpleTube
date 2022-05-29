@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 
 from ..database import Base
 
+
 class DbUser(Base):
     __tablename__ = 'usuario'
     codigo_usuario = Column(Integer, primary_key=True, index=True)
