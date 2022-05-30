@@ -1,19 +1,15 @@
 * {
     margin: 0;
-
 }
   
 .container {
   border: 1px red solid;
-  
-  
   display: flex;
   flex-direction: row;
 }
 .menu{
   border:1px green solid;
   width: 25vw;
-  
   background-color: #570d9c;
   display: flex;
   flex-direction: column;
@@ -42,7 +38,6 @@
   margin-left: 5vw;
   margin-top: 1vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 6fr 1fr 1fr;
-  
+  grid-template-columns: repeat(auto-fit, 20vw);
+  grid-template-rows: repeat(auto-fit,20vw);
 }

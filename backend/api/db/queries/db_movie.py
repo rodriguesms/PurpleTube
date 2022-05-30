@@ -25,3 +25,5 @@ def insert(db: Session, request: Filme):
 def get_all(db:Session):
     return db.query(DbFilme).all()
 
+def get_movie(db:Session,codigo_filme:int):
+    return db.query(DbFilme).filter(codigo_filme==DbFilme.codigo_filme).first()

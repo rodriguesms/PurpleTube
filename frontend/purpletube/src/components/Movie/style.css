@@ -1,10 +1,37 @@
-.movie-card{
-    border:1px greenyellow solid;
-    width: 5vw;
-    height: 3vw;
-    float: left;
+.movie-card {
+  border: none;
+  width: 5vw;
+  height: 3vw;
+  float: left;
+  cursor: pointer;
 }
-.movie-card img{
-    width: 12vw;
-    height: 15vw;
+.movie-card button {
+  border: none;
+  width: 5vw;
+  height: 3vw;
+  cursor: pointer;
+}
+.movie-card img {
+  width: 15vw;
+  height: 18vw;
+}
+.movie-info {
+  width: 15vw;
+  margin-top: -2.5vw;
+  margin-left: 0.5vw;
+  margin-right: 0.2vw;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 18px;
+}
+.movie-info span {
+  position: relative;
+  width: 7vw;
+  display: flex;
+  align-items: center;
+  color: #f0f00c;
+}
+.movie-info p {
+  margin-left: 0.5vw;
 }

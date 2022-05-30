@@ -19,3 +19,7 @@ def insert_movie(request: Filme, db:Session = Depends(get_db)):
 @router.get("/all",response_model=List[FilmeDisplay])
 def get_movies(db:Session=Depends(get_db)):
     return db_movie.get_all(db)
+
+@router.get("/{codigo_filme}",response_model=FilmeDisplay)
+def get_movie(codigo_filme:int,db:Session=Depends(get_db)):
+    return db_movie.get_movie(db,codigo_filme)

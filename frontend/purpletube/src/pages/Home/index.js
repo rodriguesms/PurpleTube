@@ -6,12 +6,20 @@ import "./style.css";
 
 function Home() {
   const [categories, setCategories] = useState();
+  const [movies,setMovies]=useState();
   useEffect(() => {
     api.get("categories/all").then((response) => {
       setCategories(response.data);
       console.log(categories[0].nome_categoria);
     });
   }, []);
+
+  useEffect(()=>{
+    api.get("movies/all").then((response)=>{
+      setMovies(response.data)
+      console.log(movies)
+    })
+  },[])
   return (
     <div className="container">
       <div className="menu">
@@ -25,11 +33,13 @@ function Home() {
 
         </div>
         <div className="movies">
-            <Movie/>
-            <Movie/>
-            <Movie/>
-            <Movie/>
-            <Movie/>
+          {
+            movies?.map((element)=>(
+              <Movie duration={element.duracao}/>
+            ))
+          }
+            
+            
         </div>
       </div>
     </div>
