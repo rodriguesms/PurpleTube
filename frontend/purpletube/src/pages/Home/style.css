@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+
+}
+  
+.container {
+  border: 1px red solid;
+  
+  
+  display: flex;
+  flex-direction: row;
+}
+.menu{
+  border:1px green solid;
+  width: 25vw;
+  
+  background-color: #570d9c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#title{
+  margin-top: 5vw;
+  display:  flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #d408c3;
+  font-size: 2.5vw;
+}
+.body{
+  border:1px black solid;
+  width: 75vw;
+  background-color: #b675f3;
+  display: flex;
+  flex-direction: column;
+}
+.menu-top{
+  border: 1px yellow solid;
+  height: 15vh;
+}
+.movies{
+  margin-left: 5vw;
+  margin-top: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6fr 1fr 1fr;
+  
+}

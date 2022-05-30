@@ -1,0 +1,10 @@
+.movie-card{
+    border:1px greenyellow solid;
+    width: 5vw;
+    height: 3vw;
+    float: left;
+}
+.movie-card img{
+    width: 12vw;
+    height: 15vw;
+}

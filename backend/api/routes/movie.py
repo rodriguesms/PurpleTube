@@ -1,7 +1,7 @@
+from typing import List
 from fastapi import APIRouter,Depends
 from fastapi.exceptions import HTTPException
 from sqlalchemy.orm.session import Session
-from typing import List
 
 from ..db.database import get_db
 from ..db.queries import db_movie
