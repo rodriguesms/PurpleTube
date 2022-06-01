@@ -11,3 +11,8 @@ class AvaliationDisplay(BaseModel):
     nota: int
     class Config():
         orm_mode = True
+
+class AvaliationMediaDisplay(BaseModel):
+    media:float
+    class Config():
+        orm_mode = True

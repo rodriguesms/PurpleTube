@@ -20,3 +20,7 @@ async def insert_actor(request: Ator, db:Session = Depends(get_db)):
 @router.get("/all", response_model=List[AtorDisplay])
 async def get_actors(db:Session=Depends(get_db)):
     return db_actor.get_all(db)
+
+@router.get("/movie_actors/{codigo_filme}", response_model=List[AtorDisplay])
+def get_movie_actors(codigo_filme:int, db:Session=Depends(get_db)):
+    return db_actor.get_movie_actors(db,codigo_filme)

@@ -3,7 +3,8 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.expression import insert
 
-from ..models.actor import DbActor 
+from ..models.actor import DbActor
+from ..models.movie import DbFilme
 from ...schemas.actor import Ator
 
 def insert(db: Session, request: Ator):
@@ -23,3 +24,9 @@ def insert(db: Session, request: Ator):
 
 def get_all(db:Session):
     return db.query(DbActor).all()
+
+
+def get_movie_actors(db:Session,codigo_filme:int):
+    return db.query(DbActor).\
+        join(DbActor.filmes).\
+            filter(DbFilme.codigo_filme == codigo_filme).all()

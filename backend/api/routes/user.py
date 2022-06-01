@@ -19,3 +19,7 @@ def insert_user(request: User, db:Session = Depends(get_db)):
 @router.get("/all", response_model=List[UserDisplay])
 def get_users(db:Session=Depends(get_db)):
     return db_user.get_all(db)
+
+@router.delete("/remove/{codigo_usuario}", response_model= UserDisplay)
+def delete_user(codigo_usuario:int, db:Session=Depends(get_db)):
+    return db_user.delete_user_by_codigo(db, codigo_usuario)

@@ -10,7 +10,7 @@ def insert(db: Session, request: Avaliation):
     new_avaliation = DbAvaliation(
         codigo_usuario = request.codigo_usuario,
         codigo_filme =  request.codigo_filme,
-        conteudo = request.conteudo
+        nota = request.nota
     )
 
     db.add(new_avaliation)
@@ -21,3 +21,11 @@ def insert(db: Session, request: Avaliation):
 
 def get_all(db:Session):
     return db.query(DbAvaliation).all()
+
+def get_movie_media_avaliation(db:Session, codigo_fime: int):
+    soma = 0
+    n = 0
+    for row in db.query(DbAvaliation).filter(DbAvaliation.codigo_filme == codigo_fime).all():
+        soma += row.nota
+        n+=1
+    return {"media": soma / n}

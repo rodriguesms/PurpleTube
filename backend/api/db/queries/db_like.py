@@ -5,6 +5,7 @@ from sqlalchemy.sql.expression import insert
 
 from ..models.like import DbLike
 from ...schemas.like import Like
+from ..models.movie import DbFilme
 
 def insert(db: Session, request: Like):
     new_like = DbLike(
@@ -20,3 +21,9 @@ def insert(db: Session, request: Like):
 
 def get_all(db:Session):
     return db.query(DbLike).all()
+
+def get_movie_likes(db:Session, codigo_fime: int):
+    qnt = 0
+    for _ in db.query(DbLike).filter(DbLike.codigo_filme == codigo_fime).all():
+        qnt+=1
+    return {"qnt_likes": qnt}

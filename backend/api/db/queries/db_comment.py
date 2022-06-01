@@ -21,3 +21,6 @@ def insert(db: Session, request: Comentario):
 
 def get_all(db:Session):
     return db.query(DbComment).all()
+
+def get_movie_comments(db:Session,codigo_filme:int):
+    return db.query(DbComment).filter(codigo_filme == DbComment.codigo_filme).all()
