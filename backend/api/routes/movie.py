@@ -30,6 +30,6 @@ def get_movie_by_category(nome_categoria:str, db:Session=Depends(get_db)):
     return db_movie.get_movie_by_category(db, nome_categoria)
 
 #acho que tá bugado
-# @router.get("/movie_category/{nome_filme}",response_model=List[FilmeDisplay])
-# def get_movie_by_name(nome_filme:str, db:Session=Depends(get_db)):
-#     return db_movie.get_movie_by_name(db, nome_filme)
+@router.get("/movie_name/{nome_filme}",response_model=List[FilmeDisplay])
+def get_movie_by_name(nome_filme:str, db:Session=Depends(get_db)):
+    return db_movie.get_movie_by_name(db, nome_filme)

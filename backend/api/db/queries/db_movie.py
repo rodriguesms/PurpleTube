@@ -3,8 +3,6 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.expression import insert
 
-
-
 from ..models.movie import DbFilme
 from ...schemas.movie import Filme
 from ..models.comment import DbComment
@@ -41,8 +39,8 @@ def get_movie_by_category(db:Session,nome_categoria: str):
                 filter(DbCategory.nome_categoria == nome_categoria).all()
 
 #acho que tá bugado
-# def get_movie_by_name(db:Session,nome_filme: str):
-#     return db.query(DbFilme).filter(DbFilme.nome_filme == nome_filme)
+def get_movie_by_name(db:Session,nome_filme: str):
+    return db.query(DbFilme).filter(DbFilme.nome_filme == str(nome_filme)).all()
         
 
 

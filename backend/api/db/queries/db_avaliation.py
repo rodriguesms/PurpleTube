@@ -28,4 +28,6 @@ def get_movie_media_avaliation(db:Session, codigo_fime: int):
     for row in db.query(DbAvaliation).filter(DbAvaliation.codigo_filme == codigo_fime).all():
         soma += row.nota
         n+=1
+    if (n == 0):
+        return 0
     return {"media": soma / n}
