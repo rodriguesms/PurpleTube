@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel
 
 class Avaliation(BaseModel):
@@ -13,6 +14,6 @@ class AvaliationDisplay(BaseModel):
         orm_mode = True
 
 class AvaliationMediaDisplay(BaseModel):
-    media:float
+    media :Optional[str]
     class Config():
         orm_mode = True

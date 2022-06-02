@@ -7,7 +7,7 @@ function Movie({ id, duration }) {
 
   useEffect(() => {
     api.get(`avaliations/movie_media_avaliation/${id}`).then((response) => {
-      setAvaliations(response.data);
+      setAvaliations(response.data.media);
     });
   }, []);
   return (
