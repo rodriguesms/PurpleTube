@@ -29,5 +29,5 @@ def get_movie_media_avaliation(db:Session, codigo_fime: int):
         soma += row.nota
         n+=1
     if (n == 0):
-        return 0
+        return {"media": 0}
     return {"media": soma / n}
