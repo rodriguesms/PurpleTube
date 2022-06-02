@@ -10,10 +10,12 @@
 .menu{
   border:1px green solid;
   width: 25vw;
+
   background-color: #570d9c;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 #title{
   margin-top: 5vw;
@@ -34,10 +36,18 @@
   border: 1px yellow solid;
   height: 15vh;
 }
+/*.movies{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  flex-basis: 100%;
+}*/
 .movies{
-  margin-left: 5vw;
-  margin-top: 1vw;
+  
+  padding: 1vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 20vw);
-  grid-template-rows: repeat(auto-fit,20vw);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12rem;
+  list-style: none;
 }

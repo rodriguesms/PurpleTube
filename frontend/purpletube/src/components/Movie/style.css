@@ -1,29 +1,29 @@
 .movie-card {
   border: none;
-  width: 5vw;
-  height: 3vw;
+  width: 4vw;
+  height: 2.5vw;
   float: left;
   cursor: pointer;
 }
 .movie-card button {
   border: none;
-  width: 5vw;
-  height: 3vw;
+  width: 4vw;
+  height: 2.5vw;
   cursor: pointer;
 }
 .movie-card img {
-  width: 15vw;
-  height: 18vw;
+  width: 12vw;
+  height: 15vw;
 }
 .movie-info {
-  width: 15vw;
+  width: 12vw;
   margin-top: -2.5vw;
   margin-left: 0.5vw;
   margin-right: 0.2vw;
   display: flex;
   justify-content: space-between;
 
-  font-size: 18px;
+  font-size: 15px;
 }
 .movie-info span {
   position: relative;

@@ -1,10 +1,11 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 import "./style.css";
 function Category({ category }) {
   return (
-    <button className="container-button">
+    <Button className="container-button">
       <p>{category}</p>
-    </button>
+    </Button>
   );
 }
 export default Category;

@@ -2,13 +2,10 @@
     margin-top: 1.5vw;
     width: 15vw;
     height: 3vw;
-    background-color: #4d4646;
+    background-color: #d60d0d;
     
     border-radius:0.8vw;
     cursor: pointer;
-    
+    color: #15ac15;
 }
-.container-button p{
-    font-size: 1.2vw;
-    color: #FFF;
-}
+
