@@ -4,7 +4,7 @@ from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.expression import insert
 
 from ..models.user import DbUser
-from ...schemas.user import User
+from ...schemas.user import User, UserLogin
 
 def insert(db: Session, request: User):
     new_user = DbUser(
@@ -28,4 +28,8 @@ def delete_user_by_codigo(db:Session,codigo_usuario:int):
     db.delete(user)
     db.commit()
     return user
-   
+
+
+def login_user(db:Session,request: UserLogin):
+    user = db.query(DbUser).filter(request.email == DbUser.email).first()
+    return user
