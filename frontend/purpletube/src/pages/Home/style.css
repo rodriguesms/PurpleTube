@@ -35,6 +35,9 @@
 .menu-top{
   border: 1px yellow solid;
   height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 /*.movies{
   display: flex;
@@ -50,4 +53,41 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 12rem;
   list-style: none;
+}
+
+.pesquisa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 3.1vw;
+  width: 100%;
+  max-width: 50vw;
+}
+
+.pesquisa input {
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  width: 75%;
+  height: 100%;
+  border-radius: 0.55vw 0 0 0.55vw;
+  border-right: none;
+}
+
+.pesquisa button {
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  width: 15%;
+  max-width:3.9vw;
+  height: 3.1vw;
+  border-left: none;
+  background: rgb(97, 9, 119);
+  border-radius: 0 0.55vw 0.55vw 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  cursor: pointer;
+}
+.pesquisa img{
+  width: 1.7vw;
+  height: 1.7vw;
 }
