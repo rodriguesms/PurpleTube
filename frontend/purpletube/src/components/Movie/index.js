@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Star, Clock } from "react-feather";
 import { api } from "../../services/api";
 import "./style.css";
-function Movie({ id, duration }) {
+function Movie({ id, duration, banner }) {
   const [avaliations, setAvaliations] = useState();
 
   useEffect(() => {
@@ -12,7 +12,7 @@ function Movie({ id, duration }) {
   }, []);
   return (
     <div className="movie-card">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTk5NjkyNzEwOV5BMl5BanBnXkFtZTcwODc5NDI1MQ@@._V1_SX300.jpg" />
+      <img src={String(banner)} />
       <div className="movie-info">
         <span>
           <Star size={20} />
