@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex: 1;
+  background-color: #CFCFCF;
+}
+
+.homeTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #4a00e0;
+}
+
+.searchBar {
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputSearch {
+  flex: 9;
+  background-color: transparent;
+  border-width: 0px;
+  text-align: center;
+  color: #CFCFCF;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.barContainer {
+  display: flex;
+  width: 60%;
+  height: 60%;
+  background-color: #210632;
+  border-radius: 10px;
+}
+
+.userSection {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

@@ -1,0 +1,111 @@
+.page-container{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  margin: auto; 
+  width: 35%;
+  height: 60%;
+  align-content: center;
+}
+
+.message{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  align-items: center;
+}
+
+.login-title {
+  display: flex;
+  flex: 1;
+  font-size: 45px;
+  font-weight: bolder;
+  color: #CFCFCF;
+}
+
+.login-subtitle{
+  font-size: 15px;
+  display: flex;
+  flex: 1;
+  color: #CFCFCF;
+}
+
+.login-form {
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  min-width: 25vw;
+  height: 40px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #CFCFCF;
+  color: white;
+  background-color: transparent;
+  margin: 5px;
+  text-align: center;
+}
+
+::placeholder {
+  color: #CFCFCF;
+}
+
+.form-item {
+  color: #CFCFCF;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-weight: bold;
+  align-items: center;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.login-button, .register-button {
+  min-width: 25vw;
+  height: 40px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 0px;
+  font-weight: bolder;
+}
+
+.register{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #CFCFCF;
+  font-weight: bold;
+}
+
+.login-button {
+  margin-bottom: 120px;
+  color: #5c0afe;
+  background-color: #CFCFCF;
+}
+
+.register-button {
+  margin-top: 10px;
+  color: #CFCFCF;
+  background-color: #30008f;
+}
+

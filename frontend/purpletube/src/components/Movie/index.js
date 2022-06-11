@@ -8,6 +8,7 @@ function Movie({ id, duration, banner }) {
   useEffect(() => {
     api.get(`avaliations/movie_media_avaliation/${id}`).then((response) => {
       setAvaliations(response.data.media);
+      console.log(response.data)
     });
   }, []);
   return (
