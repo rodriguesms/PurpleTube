@@ -3,7 +3,6 @@ from pydantic import BaseModel
 
 class Comentario(BaseModel):
     codigo_usuario : int
-    data:date
     codigo_filme:int
     conteudo: str
     

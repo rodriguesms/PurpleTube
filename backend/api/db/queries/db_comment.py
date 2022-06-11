@@ -1,4 +1,4 @@
-from fastapi import HTTPException, status
+from datetime import datetime
 from sqlalchemy import desc
 from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.expression import insert
@@ -9,7 +9,7 @@ from ...schemas.comment import Comentario
 def insert(db: Session, request: Comentario):
     new_comment = DbComment(
         codigo_usuario = request.codigo_usuario,
-        data=request.data,
+        data=datetime.now().strftime("%m/%d/%Y"),
         codigo_filme =  request.codigo_filme,
         conteudo = request.conteudo
 

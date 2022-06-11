@@ -1,0 +1,18 @@
+.comment {
+  border: 1px #c6c6c6 solid;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  border-radius: 8px;
+  padding-left: 5px;
+}
+#user {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+}
+#date {
+  color: #c6c6c6;
+  margin-left: 200px;
+  font-size: small;
+}
