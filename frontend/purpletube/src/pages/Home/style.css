@@ -6,12 +6,12 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
 }
 
 .top-home {
   display: flex;
   flex: 1;
+  position: fixed;
 }
 
 .body-home {
@@ -23,8 +23,12 @@
 .navBar {
   display: flex;
   flex: 1;
+  z-index: 1;
+  position: fixed;
+  margin-top: 8vh;
+  height: 92vh;
+  width: 15vw;
   background-color: #210632;
-  position: static;
   flex-direction: column;
   justify-content: space-evenly;
 }
@@ -38,107 +42,21 @@
 }
 
 .movieDisplay {
-  flex: 4;
+  margin-top: 8vh;
+  margin-bottom: 2vh;
+  margin-right: 5vw;
+  margin-left: 15vw;
+  position: fixed;
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.menu{
-  border:1px green solid;
-  width: 25vw;
-
-  background-color: #570d9c;
+.movies {
+  width: 85vw;
+  height: 92vh;
+  scroll-behavior: smooth;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-#title{
-  margin-top: 5vw;
-  display:  flex;
-  flex-direction: row;
-  justify-content: center;
-  color: #d408c3;
-  font-size: 2.5vw;
-}
-.body{
-  border:1px black solid;
-  width: 75vw;
-  background-color: #b675f3;
-  display: flex;
-  flex-direction: column;
-}
-.menu-top{
-  border: 1px yellow solid;
-  height: 15vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-/*.movies{
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  height: 100%;
-  flex-basis: 100%;
-}*/
-.movies{
-  
-  padding: 1vw;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 12rem;
-  list-style: none;
-}
-
-.pesquisa {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 3.1vw;
-  width: 100%;
-  max-width: 50vw;
-}
-
-.pesquisa input {
-  border: 0.5px solid rgba(0, 0, 0, 0.25);
-  width: 75%;
-  height: 100%;
-  border-radius: 0.55vw 0 0 0.55vw;
-  border-right: none;
-}
-
-.pesquisa button {
-  border: 0.5px solid rgba(0, 0, 0, 0.25);
-  width: 15%;
-  max-width:3.9vw;
-  height: 3.1vw;
-  border-left: none;
-  background: rgb(97, 9, 119);
-  border-radius: 0 0.55vw 0.55vw 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1vw;
-  cursor: pointer;
-}
-.pesquisa img{
-  width: 1.7vw;
-  height: 1.7vw;
+  justify-content: flex-start;
+  margin-inline: 50px;
+  overflow-y: scroll;
 }

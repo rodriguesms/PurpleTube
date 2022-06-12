@@ -7,18 +7,40 @@ import { Search } from "react-feather";
 import { TopBar } from "../../components/TopBar";
 
 function Home() {
+  const [optionCategory, setOptionCategory] = useState('Ação')
   const [categories, setCategories] = useState();
   const [movies, setMovies] = useState();
   const [value, setValue] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loadingCategories, setLoadingCategories] = useState(true);
+  const [loadingMovies, setLoadingMovies] = useState(true);
 
   useEffect(() => {
     api.get("categories/all").then((response) => {
       setCategories(response.data);
-      setLoading(false);
+      setLoadingCategories(false);
       console.log(categories)
     });
+    api.get(`movies/all`)
+    .then((response) => {
+      setMovies(response.data);
+      console.log(movies)
+      setLoadingMovies(false)
+    })
   }, []);
+
+  const changeMoviesByCategory = (category) => {
+    setLoadingMovies(true)
+    api.get(`movies/movie_category/${category}`)
+    .then((response) => {
+      setMovies(response.data);
+      console.log(movies)
+      setLoadingMovies(false)
+    })  
+  }
+
+  // useEffect(() => {
+  //   ap
+  // }, [optionCategory])
 
   // useEffect(() => {
   //   api.get("movies/movie_category/Ação").then((response) => {
@@ -50,15 +72,24 @@ function Home() {
       </div>
       <div className="body-home">
         <div className="navBar">
-          {!loading &&
+          {!loadingCategories &&
             categories.map((category) => 
-              <div onClick={() => console.log(category.nome_categoria)} className="categoryList" key={category.codigo_categoria}>
+              <div onClick={() => changeMoviesByCategory(category.nome_categoria)} className="categoryList" key={category.codigo_categoria}>
                 {category.nome_categoria}
               </div>
             )
           }
         </div>
-        <div className="movieDisplay"></div>
+        <div className="movieDisplay">
+          <div className="movies">
+            {
+              !loadingMovies &&
+              movies.map((movie) => 
+              <Movie className="movieItem" key={movie.codigo_filme} movie={movie}/>
+              )
+            }
+          </div>
+        </div>
       </div>
     </div>
   );

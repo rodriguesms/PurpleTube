@@ -1,0 +1,22 @@
+.pageContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.topBar {
+  display: flex;
+  flex: 1;
+  position: fixed;
+}
+
+.body {
+  display: flex;
+  flex: 10;
+  flex-direction: row;
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+
+}

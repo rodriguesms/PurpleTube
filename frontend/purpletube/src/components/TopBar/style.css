@@ -2,10 +2,13 @@
   display: flex;
   flex: 1;
   background-color: #CFCFCF;
+  width: 100vw;
+  height: 8vh;
 }
 
 .homeTitle {
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   flex: 1;

@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 
-export const TopBar = () => {
+export const TopBar = ({isHome=true}) => {
   
   const [user, setUser] = useState();
   const [isLogged, setLogged] = useState(false);
@@ -23,10 +23,10 @@ export const TopBar = () => {
 
   return(
   <div className="container">
-    <Link to="/" className="homeTitle">
+    <a onClick={() => isHome ? (window.location.reload()) : (navigate("/"))} className="homeTitle">
       <Film style={{ marginRight: "15px"}} />
       PurpleTube
-    </Link>
+    </a>
     <div className="searchBar">
       <div className="barContainer">
         <input type="text" className="inputSearch"/>
