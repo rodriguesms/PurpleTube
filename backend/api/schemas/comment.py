@@ -8,10 +8,10 @@ class Comentario(BaseModel):
     
 
 class ComentarioDisplay(BaseModel):
-    codigo_comentario: int
+    
     data:date
-    codigo_usuario : int
-    codigo_filme:int
+    nome_usuario:str
     conteudo: str
     class Config():
         orm_mode = True
+

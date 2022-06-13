@@ -3,6 +3,7 @@ from sqlalchemy import desc
 from sqlalchemy.orm.session import Session
 from sqlalchemy.sql.expression import insert
 
+from ..models.user import DbUser
 from ..models.comment import DbComment
 from ...schemas.comment import Comentario
 
@@ -22,7 +23,11 @@ def insert(db: Session, request: Comentario):
     return new_comment
 
 def get_all(db:Session):
-    return db.query(DbComment).order_by(desc(DbComment.data)).all()
+    return db.query(DbComment.data,DbUser.nome_usuario,DbComment.conteudo)\
+            .join(DbUser,DbUser.codigo_usuario==DbComment.codigo_usuario)\
+            .order_by(desc(DbComment.data)).all()
 
 def get_movie_comments(db:Session,codigo_filme:int):
-    return db.query(DbComment).filter(codigo_filme == DbComment.codigo_filme).all()
+    return db.query(DbComment.data,DbUser.nome_usuario,DbComment.conteudo)\
+            .join(DbUser,DbUser.codigo_usuario==DbComment.codigo_usuario)\
+            .filter(DbComment.codigo_filme==codigo_filme).all()

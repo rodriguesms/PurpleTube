@@ -22,4 +22,4 @@ def get_comments(db:Session=Depends(get_db)):
 
 @router.get("/movie_comments/{codigo_filme}", response_model=List[ComentarioDisplay])
 def get_movie_comments(codigo_filme:int, db:Session=Depends(get_db)):
-    return db_comment.get_movie_comments(db,codigo_filme)
+    return  db_comment.get_movie_comments(db,codigo_filme)
