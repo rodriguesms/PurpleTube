@@ -7,10 +7,8 @@ import { Search } from "react-feather";
 import { TopBar } from "../../components/TopBar";
 
 function Home() {
-  const [optionCategory, setOptionCategory] = useState('Ação')
   const [categories, setCategories] = useState();
   const [movies, setMovies] = useState();
-  const [value, setValue] = useState();
   const [loadingCategories, setLoadingCategories] = useState(true);
   const [loadingMovies, setLoadingMovies] = useState(true);
 
@@ -37,34 +35,6 @@ function Home() {
       setLoadingMovies(false)
     })  
   }
-
-  // useEffect(() => {
-  //   ap
-  // }, [optionCategory])
-
-  // useEffect(() => {
-  //   api.get("movies/movie_category/Ação").then((response) => {
-  //     setMovies(response.data);
-  //     console.log(movies);
-  //   });
-  // }, []);
-  // function handleChangeCategory(category) {
-  //   api.get(`movies/movie_category/${category}`).then((response) => {
-  //     setMovies(response.data);
-  //   });
-  // }
-  // function handleChange(event) {
-  //   const { value } = event.target;
-  //   setValue(value);
-  // }
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   console.log(value);
-  //   api.get(`movies/movie_name/${value}`).then((response) => {
-  //     setMovies(response.data);
-  //     console.log(movies);
-  //   });
-  // }
   return (
     <div className="homeContainer">
       <div className="top-home">
