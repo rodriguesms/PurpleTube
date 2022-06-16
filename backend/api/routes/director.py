@@ -19,3 +19,7 @@ async def insert_director(request: Diretor, db:Session = Depends(get_db)):
 @router.get("/all", response_model= List[DiretorDisplay])
 def get_directors(db:Session=Depends(get_db)):
     return db_director.get_all(db)
+
+@router.get("/movie_directors/{codigo_filme}", response_model=List[DiretorDisplay])
+def get_movie_directors(codigo_filme: int, db: Session = Depends(get_db)):
+    return db_director.get_movie_directors(db, codigo_filme)
