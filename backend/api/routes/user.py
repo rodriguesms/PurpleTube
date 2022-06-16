@@ -24,7 +24,6 @@ def get_users(db:Session=Depends(get_db)):
 def delete_user(codigo_usuario:int, db:Session=Depends(get_db)):
     return db_user.delete_user_by_codigo(db, codigo_usuario)
 
-
 @router.post("/login", response_model= UserDisplay)
 def login_user(request: UserLogin, db:Session=Depends(get_db)):
     user =  db_user.login_user(db, request)

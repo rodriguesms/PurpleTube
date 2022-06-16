@@ -15,3 +15,10 @@ class ComentarioDisplay(BaseModel):
     class Config():
         orm_mode = True
 
+class ComentarioDisplayPost(BaseModel):
+    codigo_usuario:int
+    codigo_filme: int
+    date: str
+    conteudo: str
+    class Config():
+        orm_mode = True

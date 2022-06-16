@@ -5,14 +5,14 @@ from typing import List
 
 from ..db.database import get_db
 from ..db.queries import db_comment
-from ..schemas.comment import Comentario, ComentarioDisplay
+from ..schemas.comment import Comentario, ComentarioDisplay, ComentarioDisplayPost
 
 router = APIRouter(
     prefix="/comments",
     tags=['Comments']
 )
 
-@router.post("",response_model=ComentarioDisplay)
+@router.post("",response_model=ComentarioDisplayPost)
 async def insert_comment(request: Comentario, db:Session = Depends(get_db)):
     return db_comment.insert(db,request)
 

@@ -23,6 +23,9 @@ def insert(db: Session, request: User):
 def get_all(db:Session):
     return db.query(DbUser).all()
 
+def get_by_id(db:Session, codigo_usuario: int):
+    return db.query(DbUser).filter(codigo_usuario==DbUser.codigo_usuario).one()
+
 def delete_user_by_codigo(db:Session,codigo_usuario:int):
     user = db.query(DbUser).filter(codigo_usuario== DbUser.codigo_usuario).one()
     db.delete(user)
