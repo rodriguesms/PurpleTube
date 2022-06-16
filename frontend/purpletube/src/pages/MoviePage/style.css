@@ -1,6 +1,7 @@
 .pageContainer {
   position: absolute;
   display: flex;
+  flex: 1;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
@@ -18,5 +19,95 @@
   flex: 10;
   flex-direction: row;
   background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  justify-content: center;
+  width: 100%;
+}
 
+.mid-area {
+  display: flex;
+  position: static;
+  flex-direction: column;
+  box-shadow: 0 30px 40px #210632;
+  background-image: linear-gradient(to bottom, #7922b0, #510d7c);
+  width: 60%;
+  margin-top: 10vh;
+}
+
+.movieInfo-area {
+  display: flex;
+  height: 450px;
+  width: 100%;
+  flex-direction: row;
+}
+
+.mainMovieInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.individual-movie-image-card {
+  width: 300px;
+  height: 450px;
+  padding: 2%;
+}
+.individual-movie-image {
+  width: 300px;
+  height: 450px;
+}
+
+.movieTitle {
+  flex: 1;
+  font-size: 64px;
+  color: #CFCFCF;
+  text-shadow: 2px 2px #210632;
+  padding: 5%;
+}
+
+.directors {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.movieDirector {
+  font-size: 32px;
+  color: #CFCFCF;
+  text-shadow: 2px 2px #210632;
+}
+
+.actors {
+  font-size: 18px;
+  color: #CFCFCF;
+  text-shadow: 2px 2px #210632;
+  margin: 5px;
+}
+
+.actorsDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.movieDescription {
+  font-size: 24px;
+  padding: 5%;
+  color: #CFCFCF;
+  text-shadow: 2px 2px #210632;
+  text-align: justify;
+  text-overflow: hidden;
+}
+
+.comments-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 100%;
+  width: 80%;
+  align-self: center;
 }

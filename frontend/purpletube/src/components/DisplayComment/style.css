@@ -1,18 +1,31 @@
 .comment {
-  border: 1px #c6c6c6 solid;
+  border: 5px #c6c6c6 solid;
+  border-radius: 10px;
   display: flex;
+  margin: auto;
+  width: 70%;
   flex-direction: column;
-  width: 340px;
   border-radius: 8px;
-  padding-left: 5px;
+  border-width: 2px;
+  border-color: #CFCFCF;
+  color: #CFCFCF;
+  background-color: #210632;
+  margin-bottom: 10px;
 }
 #user {
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin-left: 5%;
 }
+
+#comment {
+  margin-left: 5%;
+}
+
 #date {
   color: #c6c6c6;
-  margin-left: 200px;
+  margin-right: 5%;
   font-size: small;
 }
