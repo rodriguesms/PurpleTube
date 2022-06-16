@@ -83,13 +83,13 @@ function MoviePage() {
           </div>
           <div className="comments-area">
             { isLogged && <SendComment codigo_filme={movie.codigo_filme} codigo_usuario={user.codigo_usuario}/> }
-            { !loadComments && 
+            {!loadComments && 
             comments.map((comment) => 
               <DisplayComment key={comment.codigo_comentario} 
               user={comment.nome_usuario} 
               comment={comment.conteudo}
               date={comment.data}/>
-            )}
+              )}
           </div>
         </div>
       </div>

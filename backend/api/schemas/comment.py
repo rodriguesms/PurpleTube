@@ -18,7 +18,7 @@ class ComentarioDisplay(BaseModel):
 class ComentarioDisplayPost(BaseModel):
     codigo_usuario:int
     codigo_filme: int
-    date: str
+    data: date
     conteudo: str
     class Config():
         orm_mode = True
