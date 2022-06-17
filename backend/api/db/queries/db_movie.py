@@ -38,7 +38,6 @@ def get_movie_by_category(db:Session,nome_categoria: str):
             join(DbFilme.categorias).\
                 filter(DbCategory.nome_categoria == nome_categoria).all()
 
-#acho que tá bugado
 def get_movie_by_name(db:Session,nome_filme: str):
     return db.query(DbFilme).filter(DbFilme.nome_filme == str(nome_filme)).all()
         
